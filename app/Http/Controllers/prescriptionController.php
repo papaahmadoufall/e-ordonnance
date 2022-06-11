@@ -31,7 +31,7 @@ class prescriptionController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -42,11 +42,19 @@ class prescriptionController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $validated = $request->validate([
-            'title' => 'required|unique:posts|max:255',
-            'body' => 'required',
-        ]);
+       //store the prescription and the medecines
+        $prescription = new presciption();
+        $prescription->save();
+        $medecines = $request->medecines;
+        foreach($medecines as $medecine){
+            $medecine = new medecine();
+            $medecine->name = $medecine['name'];
+            $medecine->posologie = $medecine['posologie'];
+            $medecine->quantity = $medecine['quantity'];
+            $medecine->prescription_id = $prescription->id;
+            $medecine->save();
+        }
+        
     }
 
     /**
