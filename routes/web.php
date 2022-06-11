@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 Route::resource('prescription', prescriptionController::class)->names('prescription');
     // Route::post('medecine/{prescription_id}', medecineController::class)->name('medecine');
+Route::get('/index', function () {
+    return view('index');
+});
