@@ -28,12 +28,31 @@ border: 1px solid rgba(255, 255, 255, 0.22);
     }
     div.btn > .btn-getstarted{
         margin-bottom: 10vh;
-        background-color: rgb(255, 229, 56);
+        background-color: #ffec70;
         border:none;
         border-radius: 20px;
-        padding: 0 15px;
+        padding: 0 35px;
         width: auto;
         height: 6vh;
+        cursor: pointer;
+        font-weight: 500;
+        font-family: "poppins";
+        transition: ease-in-out .2s;
+
+
+    }
+    div.btn > .btn-getstarted:hover{
+        background-color: #eed740;
+        color: #000;
+        border: rgba(0, 0, 0, 0.379);
+        transform: scale(1.1)
+
+    }
+    div.txt-slogan{
+        margin:20% 0 0 5%;
+        text-align:left;
+        font-size:80px;
+        color: #fff;
     }
 </style>
 <div class="landing-page">
@@ -46,13 +65,11 @@ border: 1px solid rgba(255, 255, 255, 0.22);
         <div class="btn"><button class="btn-getstarted">Commencer</button></div>
     </div>
     <div class="section-content">
-        <div class="txt-slogan">
+        <div style="height: 70vh" class="txt-slogan">
             <p>
-                simple et facile d'utlisation
+                Simple et <br> facile d'utlisation
             </p>
-            <div class="img-bg">
-                <img src={{ asset('ordonnancebg.png') }}  alt="">
-            </div>
+
         </div>
     </div>
 </div>
