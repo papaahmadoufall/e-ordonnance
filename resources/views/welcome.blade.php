@@ -62,7 +62,7 @@ border: 1px solid rgba(255, 255, 255, 0.22);
                 Generateur d'ordonnance
             </p>
         </div>
-        <div class="btn"><button class="btn-getstarted">Commencer</button></div>
+        <div class="btn"><button class="btn-getstarted"> <a href="{{route('prescription.index')}}"> Commencer</a></button></div>
     </div>
     <div class="section-content">
         <div style="height: 70vh" class="txt-slogan">
