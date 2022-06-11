@@ -45,14 +45,15 @@ class prescriptionController extends Controller
        //store the prescription and the medecines
         $prescription = new presciption();
         $prescription->save();
-        $medecines = $request->medecines;
-        foreach($medecines as $medecine){
-            $medecine = new medecine();
-            $medecine->name = $medecine['name'];
-            $medecine->posologie = $medecine['posologie'];
-            $medecine->quantity = $medecine['quantity'];
-            $medecine->prescription_id = $prescription->id;
-            $medecine->save();
+        $medecines = $request->all();
+        
+        $medecine = new medecine();
+        $medecine->name = $medecine['name'];
+        $medecine->posologie = $medecine['posologie'];
+        $medecine->quantity = $medecine['quantity'];
+        $medecine->prescription_id = $prescription->id;
+        $medecine->save();
+           
         }
         
     }
