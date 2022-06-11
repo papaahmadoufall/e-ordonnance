@@ -21,7 +21,7 @@ class prescriptionController extends Controller
          //$users = User::join('posts', 'users.id', '=', 'posts.user_id')
          //->get(['users.*', 'posts.descrption']);
         //  SELECT `medecines`.*, `presciptions`.`id` from `medecines` inner join `presciptions` on `presciptions`.`id` = `medecines`.`prescription_id`;
-       return json_decode($prescriptions);
+       return view('index', ["prescription"=>$prescriptions] );
     }
 
     /**
